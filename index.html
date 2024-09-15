@@ -3,17 +3,11 @@
 
 <head>
     <title>Audio Samples</title>
-
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-    <!-- You can include your external CSS file here -->
-    <!-- <link rel="stylesheet" type="text/css" href="index.css"> -->
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <style>
-        /* Add CSS to make the rows and columns compact */
         body {
             font-family: 'Open Sans', sans-serif;
             margin: 0;
@@ -25,7 +19,7 @@
             margin-bottom: 40px;
         }
 
-        h1, h2, h3, h4 {
+        h1, h2 {
             font-family: 'Crimson Text', serif;
             color: #333;
         }
@@ -41,18 +35,26 @@
             margin-bottom: 15px;
         }
 
-        p {
-            color: #555;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+
+        table th, table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
         }
 
         .playlist {
             display: flex;
-            flex-wrap: wrap;
+            justify-content: space-around;
             gap: 15px;
         }
 
         .labeled-audio {
-            flex: 1 1 calc(25% - 15px);
+            flex: 1;
             box-sizing: border-box;
             background-color: #fff;
             padding: 10px;
@@ -61,197 +63,108 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .labeled-audio p {
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #333;
-        }
-
         audio {
             width: 100%;
-        }
-
-        @media (max-width: 1200px) {
-            .labeled-audio {
-                flex: 1 1 calc(33.333% - 15px);
-            }
-        }
-
-        @media (max-width: 800px) {
-            .labeled-audio {
-                flex: 1 1 calc(50% - 15px);
-            }
-        }
-
-        @media (max-width: 500px) {
-            .labeled-audio {
-                flex: 1 1 100%;
-            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class='section'>
-        <h1>Audio Samples</h1>
-        <p>Explore the audio samples below.</p>
+<div class='section'>
+    <h1>Audio Samples Comparison</h1>
+    <p>Explore the audio samples with and without stem augmentation.</p>
 
-        <!-- All Stem A Samples -->
-        <h2>All Stem A Samples</h2>
-        <div class='playlist'>
-            <!-- Sample 1 -->
-            <div class='labeled-audio'>
-                <p>Sample 1</p>
-                <audio controls>
-                    <source src='samples/all_stem_A/sample1.mp3' type='audio/mpeg'>
-                </audio>
-            </div>
-            <!-- Sample 2 -->
-            <div class='labeled-audio'>
-                <p>Sample 2</p>
-                <audio controls>
-                    <source src='samples/all_stem_A/sample2.mp3' type='audio/mpeg'>
-                </audio>
-            </div>
-            <!-- Sample 3 -->
-            <div class='labeled-audio'>
-                <p>Sample 3</p>
-                <audio controls>
-                    <source src='samples/all_stem_A/sample3.mp3' type='audio/mpeg'>
-                </audio>
-            </div>
-            <!-- Sample 4 -->
-            <div class='labeled-audio'>
-                <p>Sample 4</p>
-                <audio controls>
-                    <source src='samples/all_stem_A/sample4.mp3' type='audio/mpeg'>
-                </audio>
-            </div>
-            <!-- Sample 5 -->
-            <div class='labeled-audio'>
-                <p>Sample 5</p>
-                <audio controls>
-                    <source src='samples/all_stem_A/sample5.mp3' type='audio/mpeg'>
-                </audio>
-            </div>
-            <!-- Sample 6 -->
-            <div class='labeled-audio'>
-                <p>Sample 6</p>
-                <audio controls>
-                    <source src='samples/all_stem_A/sample6.mp3' type='audio/mpeg'>
-                </audio>
-            </div>
-            <!-- Sample 7 -->
-            <div class='labeled-audio'>
-                <p>Sample 7</p>
-                <audio controls>
-                    <source src='samples/all_stem_A/sample7.mp3' type='audio/mpeg'>
-                </audio>
-            </div>
-            <!-- Sample 8 -->
-            <div class='labeled-audio'>
-                <p>Sample 8</p>
-                <audio controls>
-                    <source src='samples/all_stem_A/sample8.mp3' type='audio/mpeg'>
-                </audio>
-            </div>
-            <!-- Sample 9 -->
-            <div class='labeled-audio'>
-                <p>Sample 9</p>
-                <audio controls>
-                    <source src='samples/all_stem_A/sample9.mp3' type='audio/mpeg'>
-                </audio>
-            </div>
-            <!-- Sample 10 -->
-            <div class='labeled-audio'>
-                <p>Sample 10</p>
-                <audio controls>
-                    <source src='samples/all_stem_A/sample10.mp3' type='audio/mpeg'>
-                </audio>
-            </div>
-        </div>
+    <!-- Table for Stem Augmentation -->
+    <h2>With Stem Augmentation</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Sample</th>
+                <th>Clean</th>
+                <th>Est</th>
+                <th>Noisy</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sample 1</td>
+                <td><audio controls><source src="samples/clean1.mp3" type="audio/mpeg"></audio></td>
+                <td><audio controls><source src="samples/est1.mp3" type="audio/mpeg"></audio></td>
+                <td><audio controls><source src="samples/noisy1.mp3" type="audio/mpeg"></audio></td>
+            </tr>
+            <tr>
+                <td>Sample 2</td>
+                <td><audio controls><source src="samples/clean2.mp3" type="audio/mpeg"></audio></td>
+                <td><audio controls><source src="samples/est2.mp3" type="audio/mpeg"></audio></td>
+                <td><audio controls><source src="samples/noisy2.mp3" type="audio/mpeg"></audio></td>
+            </tr>
+            <tr>
+                <td>Sample 3</td>
+                <td><audio controls><source src="samples/clean3.mp3" type="audio/mpeg"></audio></td>
+                <td><audio controls><source src="samples/est3.mp3" type="audio/mpeg"></audio></td>
+                <td><audio controls><source src="samples/noisy3.mp3" type="audio/mpeg"></audio></td>
+            </tr>
+            <tr>
+                <td>Sample 4</td>
+                <td><audio controls><source src="samples/clean4.mp3" type="audio/mpeg"></audio></td>
+                <td><audio controls><source src="samples/est4.mp3" type="audio/mpeg"></audio></td>
+                <td><audio controls><source src="samples/noisy4.mp3" type="audio/mpeg"></audio></td>
+            </tr>
+            <tr>
+                <td>Sample 5</td>
+                <td><audio controls><source src="samples/clean5.mp3" type="audio/mpeg"></audio></td>
+                <td><audio controls><source src="samples/est5.mp3" type="audio/mpeg"></audio></td>
+                <td><audio controls><source src="samples/noisy5.mp3" type="audio/mpeg"></audio></td>
+            </tr>
+        </tbody>
+    </table>
 
-        <!-- All Stem NA Samples -->
-        <h2>All Stem NA Samples</h2>
-        <div class='playlist'>
-            <!-- Sample 1 -->
-            <div class='labeled-audio'>
-                <p>Sample 1</p>
-                <audio controls>
-                    <source src='samples/all_stem_NA/sample1.mp3' type='audio/mpeg'>
-                </audio>
-            </div>
-            <!-- Sample 2 -->
-            <div class='labeled-audio'>
-                <p>Sample 2</p>
-                <audio controls>
-                    <source src='samples/all_stem_NA/sample2.mp3' type='audio/mpeg'>
-                </audio>
-            </div>
-            <!-- Sample 3 -->
-            <div class='labeled-audio'>
-                <p>Sample 3</p>
-                <audio controls>
-                    <source src='samples/all_stem_NA/sample3.mp3' type='audio/mpeg'>
-                </audio>
-            </div>
-            <!-- Sample 4 -->
-            <div class='labeled-audio'>
-                <p>Sample 4</p>
-                <audio controls>
-                    <source src='samples/all_stem_NA/sample4.mp3' type='audio/mpeg'>
-                </audio>
-            </div>
-            <!-- Sample 5 -->
-            <div class='labeled-audio'>
-                <p>Sample 5</p>
-                <audio controls>
-                    <source src='samples/all_stem_NA/sample5.mp3' type='audio/mpeg'>
-                </audio>
-            </div>
-            <!-- Sample 6 -->
-            <div class='labeled-audio'>
-                <p>Sample 6</p>
-                <audio controls>
-                    <source src='samples/all_stem_NA/sample6.mp3' type='audio/mpeg'>
-                </audio>
-            </div>
-            <!-- Sample 7 -->
-            <div class='labeled-audio'>
-                <p>Sample 7</p>
-                <audio controls>
-                    <source src='samples/all_stem_NA/sample7.mp3' type='audio/mpeg'>
-                </audio>
-            </div>
-            <!-- Sample 8 -->
-            <div class='labeled-audio'>
-                <p>Sample 8</p>
-                <audio controls>
-                    <source src='samples/all_stem_NA/sample8.mp3' type='audio/mpeg'>
-                </audio>
-            </div>
-            <!-- Sample 9 -->
-            <div class='labeled-audio'>
-                <p>Sample 9</p>
-                <audio controls>
-                    <source src='samples/all_stem_NA/sample9.mp3' type='audio/mpeg'>
-                </audio>
-            </div>
-            <!-- Sample 10 -->
-            <div class='labeled-audio'>
-                <p>Sample 10</p>
-                <audio controls>
-                    <source src='samples/all_stem_NA/sample10.mp3' type='audio/mpeg'>
-                </audio>
-            </div>
-        </div>
-
-        <!-- Include other sections as needed -->
-    </div>
-
-    <!-- Include your JavaScript if necessary -->
-    <!-- <script src="script.js"></script> -->
+    <!-- Table for No Stem Augmentation -->
+    <h2>Without Stem Augmentation</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Sample</th>
+                <th>Clean</th>
+                <th>Est</th>
+                <th>Noisy</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sample 1</td>
+                <td><audio controls><source src="samples/clean6.mp3" type="audio/mpeg"></audio></td>
+                <td><audio controls><source src="samples/est6.mp3" type="audio/mpeg"></audio></td>
+                <td><audio controls><source src="samples/noisy6.mp3" type="audio/mpeg"></audio></td>
+            </tr>
+            <tr>
+                <td>Sample 2</td>
+                <td><audio controls><source src="samples/clean7.mp3" type="audio/mpeg"></audio></td>
+                <td><audio controls><source src="samples/est7.mp3" type="audio/mpeg"></audio></td>
+                <td><audio controls><source src="samples/noisy7.mp3" type="audio/mpeg"></audio></td>
+            </tr>
+            <tr>
+                <td>Sample 3</td>
+                <td><audio controls><source src="samples/clean8.mp3" type="audio/mpeg"></audio></td>
+                <td><audio controls><source src="samples/est8.mp3" type="audio/mpeg"></audio></td>
+                <td><audio controls><source src="samples/noisy8.mp3" type="audio/mpeg"></audio></td>
+            </tr>
+            <tr>
+                <td>Sample 4</td>
+                <td><audio controls><source src="samples/clean9.mp3" type="audio/mpeg"></audio></td>
+                <td><audio controls><source src="samples/est9.mp3" type="audio/mpeg"></audio></td>
+                <td><audio controls><source src="samples/noisy9.mp3" type="audio/mpeg"></audio></td>
+            </tr>
+            <tr>
+                <td>Sample 5</td>
+                <td><audio controls><source src="samples/clean10.mp3" type="audio/mpeg"></audio></td>
+                <td><audio controls><source src="samples/est10.mp3" type="audio/mpeg"></audio></td>
+                <td><audio controls><source src="samples/noisy10.mp3" type="audio/mpeg"></audio></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 </body>
 </html>

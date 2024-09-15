@@ -3,57 +3,197 @@
 
 <head>
     <title>Audio Samples</title>
+
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
         }
 
-        .section {
-            margin: 20px;
+        h1 {
+            font-family: 'Crimson Text', serif;
+            font-size: 32px;
+            margin-bottom: 20px;
         }
 
         h2 {
-            font-family: 'Crimson Text', serif;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 24px;
+            margin-top: 40px;
+            color: #333;
+        }
+
+        .sample-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
 
         .audio-sample {
-            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .audio-sample p {
+            margin-right: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        audio {
+            width: 300px;
         }
     </style>
+
 </head>
 
 <body>
 
-    <div class="section">
-        <h1>Audio Samples: all_stem_A</h1>
-        <div class="audio-sample"><audio controls><source src="path_to_audio_files/all_stem_A/sample1.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></div>
-        <div class="audio-sample"><audio controls><source src="path_to_audio_files/all_stem_A/sample2.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></div>
-        <div class="audio-sample"><audio controls><source src="path_to_audio_files/all_stem_A/sample3.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></div>
-        <div class="audio-sample"><audio controls><source src="path_to_audio_files/all_stem_A/sample4.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></div>
-        <div class="audio-sample"><audio controls><source src="path_to_audio_files/all_stem_A/sample5.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></div>
-        <div class="audio-sample"><audio controls><source src="path_to_audio_files/all_stem_A/sample6.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></div>
-        <div class="audio-sample"><audio controls><source src="path_to_audio_files/all_stem_A/sample7.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></div>
-        <div class="audio-sample"><audio controls><source src="path_to_audio_files/all_stem_A/sample8.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></div>
-        <div class="audio-sample"><audio controls><source src="path_to_audio_files/all_stem_A/sample9.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></div>
-        <div class="audio-sample"><audio controls><source src="path_to_audio_files/all_stem_A/sample10.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></div>
-    </div>
+    <div>
+        <h1>Audio Samples Comparison</h1>
 
-    <div class="section">
-        <h1>Audio Samples: all_stem_NA</h1>
-        <div class="audio-sample"><audio controls><source src="path_to_audio_files/all_stem_NA/sample1.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></div>
-        <div class="audio-sample"><audio controls><source src="path_to_audio_files/all_stem_NA/sample2.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></div>
-        <div class="audio-sample"><audio controls><source src="path_to_audio_files/all_stem_NA/sample3.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></div>
-        <div class="audio-sample"><audio controls><source src="path_to_audio_files/all_stem_NA/sample4.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></div>
-        <div class="audio-sample"><audio controls><source src="path_to_audio_files/all_stem_NA/sample5.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></div>
-        <div class="audio-sample"><audio controls><source src="path_to_audio_files/all_stem_NA/sample6.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></div>
-        <div class="audio-sample"><audio controls><source src="path_to_audio_files/all_stem_NA/sample7.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></div>
-        <div class="audio-sample"><audio controls><source src="path_to_audio_files/all_stem_NA/sample8.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></div>
-        <div class="audio-sample"><audio controls><source src="path_to_audio_files/all_stem_NA/sample9.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></div>
-        <div class="audio-sample"><audio controls><source src="path_to_audio_files/all_stem_NA/sample10.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></div>
-    </div>
+        <!-- all_stem_A Section -->
+        <div class="sample-section">
+            <h2>All Stem A Samples</h2>
+            <div class="audio-sample">
+                <p>Sample 1:</p>
+                <audio controls>
+                    <source src="samples/all_stem_A/sample1.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-sample">
+                <p>Sample 2:</p>
+                <audio controls>
+                    <source src="samples/all_stem_A/sample2.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-sample">
+                <p>Sample 3:</p>
+                <audio controls>
+                    <source src="samples/all_stem_A/sample3.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-sample">
+                <p>Sample 4:</p>
+                <audio controls>
+                    <source src="samples/all_stem_A/sample4.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-sample">
+                <p>Sample 5:</p>
+                <audio controls>
+                    <source src="samples/all_stem_A/sample5.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-sample">
+                <p>Sample 6:</p>
+                <audio controls>
+                    <source src="samples/all_stem_A/sample6.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-sample">
+                <p>Sample 7:</p>
+                <audio controls>
+                    <source src="samples/all_stem_A/sample7.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-sample">
+                <p>Sample 8:</p>
+                <audio controls>
+                    <source src="samples/all_stem_A/sample8.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-sample">
+                <p>Sample 9:</p>
+                <audio controls>
+                    <source src="samples/all_stem_A/sample9.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-sample">
+                <p>Sample 10:</p>
+                <audio controls>
+                    <source src="samples/all_stem_A/sample10.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
 
+        <!-- all_stem_NA Section -->
+        <div class="sample-section">
+            <h2>All Stem NA Samples</h2>
+            <div class="audio-sample">
+                <p>Sample 1:</p>
+                <audio controls>
+                    <source src="samples/all_stem_NA/sample1.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-sample">
+                <p>Sample 2:</p>
+                <audio controls>
+                    <source src="samples/all_stem_NA/sample2.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-sample">
+                <p>Sample 3:</p>
+                <audio controls>
+                    <source src="samples/all_stem_NA/sample3.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-sample">
+                <p>Sample 4:</p>
+                <audio controls>
+                    <source src="samples/all_stem_NA/sample4.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-sample">
+                <p>Sample 5:</p>
+                <audio controls>
+                    <source src="samples/all_stem_NA/sample5.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-sample">
+                <p>Sample 6:</p>
+                <audio controls>
+                    <source src="samples/all_stem_NA/sample6.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-sample">
+                <p>Sample 7:</p>
+                <audio controls>
+                    <source src="samples/all_stem_NA/sample7.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-sample">
+                <p>Sample 8:</p>
+                <audio controls>
+                    <source src="samples/all_stem_NA/sample8.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-sample">
+                <p>Sample 9:</p>
+                <audio controls>
+                    <source src="samples/all_stem_NA/sample9.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-sample">
+                <p>Sample 10:</p>
+                <audio controls>
+                    <source src="samples/all_stem_NA/sample10.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -1,10 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    border: none;
     box-sizing: border-box;
     font-family: "Crimson Text", serif;
-    font-weight: 400;
     font-size: 20px;
     line-height: 145%;
     color: rgb(75, 81, 93);
@@ -16,7 +14,10 @@ body {
     min-width: 300px;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: "Open Sans", sans-serif;
     color: rgb(36, 41, 46);
 }
@@ -26,20 +27,20 @@ h1 {
     font-size: 40px;
     font-weight: 600;
     margin-bottom: 40px;
+    color: rgb(18, 18, 19);
 }
 
 h2 {
     font-size: 30px;
     font-weight: 600;
     margin: 60px 0px 10px 0px;
+    text-align: center;
 }
 
 h3 {
     font-size: 24px;
     font-weight: 400;
     margin: 40px 0px 10px 0px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid rgb(229,232,235);
 }
 
 h4 {
@@ -48,116 +49,80 @@ h4 {
     margin: 40px 0px 10px 0px;
 }
 
-ul {
-    display:table;
-    padding-left: 8%;
-    margin: 0px 0px;
-}
-
-li {
-    font-size: 20px;
-    margin-top: 15px;
-}
-
-li:first-of-type {
-    margin-top: 0px;
-}
-
-a {
-    color: rgb(68, 128, 200)
-}
-
-a:link {
-    text-decoration: none;
-}
-
-a:visited {
-    text-decoration: none;
-}
-
-audio {
-    width: 100%;
-}
-
-audio:focus {
-    outline: none;
-}
-
-select {
+/* Table Styles */
+table {
+    width: 60%;
+    /* Adjust width as needed */
     margin: auto;
-    margin-bottom: 20px;
-    display: block;
-    font-size: 20px;
-    width: 170px;
+    /* This centers the table horizontally */
+    border-collapse: collapse;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-hr {
-    margin: 60px 0px;
-    border-bottom: 1px solid rgb(205, 208, 211);
+th,
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
 }
 
-p {
-    margin: 15px 0px 20px 0px;
-    padding-right: 5px;
+th {
+    font-weight: bold;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
-.section {
-    margin-bottom: 100px;
-    width: 90%;
-    margin: auto;
-    max-width: 660px;
+tbody tr {
+    transition: background-color 0.3s ease;
 }
 
-.toc > li {
-    margin-top: 0px;
+tbody tr:hover {
+    background-color: #f0f8ff;
 }
 
-.text {
+/* Button Styles */
+button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
     font-size: 16px;
-    text-align: center;
-    font-style: italic;
-    line-height: 120%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 120px;
+    /* Fixed width for uniformity */
 }
 
-.text2 {
-    position: absolute;
-    bottom: 60px;
+button.playing {
+    background-color: #6c757d;
 }
 
-.labeled-audio {
-    text-align: center;
-    display: inline;
-    max-width: 350px;
-    min-width: 275px;
-    flex: 1 1 275px;
-    margin: 5px 10px;
-    position: relative;
+button:hover {
+    background-color: #45a049;
 }
 
-.labeled-audio2 {
-    min-height: 135px;
-}
-
-.labeled-audio2 > audio {
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-}
-
-.labeled-audio > p {
-    margin: 10px 0px 2px;
-}
-
-.playlist {
-    display: flex;
+/* Progress Bar Styles */
+.progress-bar {
     width: 100%;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 10px 40px 0px 0px;
+    height: 10px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    vertical-align: middle;
 }
 
-.playlist-title {
-    display: block;
-    margin: 0px 20%;
-    margin-top: 30px;
+.progress-bar-fill {
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.5s ease;
 }

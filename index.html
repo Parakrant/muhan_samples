@@ -2,81 +2,65 @@
 <html lang="en">
 
 <head>
-    <title>Audio Samples</title>
+    <title>Audio Samples Comparison</title>
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
 
-        .section {
-            margin-bottom: 40px;
-        }
-
-        h1, h2 {
-            font-family: 'Crimson Text', serif;
-            color: #333;
-        }
-
-        h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            font-size: 28px;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 40px;
-        }
-
-        table th, table td {
-            padding: 12px;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
-
-        .playlist {
-            display: flex;
-            justify-content: space-around;
-            gap: 15px;
-        }
-
-        .labeled-audio {
-            flex: 1;
-            box-sizing: border-box;
-            background-color: #fff;
-            padding: 10px;
-            border-radius: 6px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        audio {
-            width: 100%;
-        }
-    </style>
 </head>
 
 <body>
 
-<div class='section'>
-    <h1>Audio Samples Comparison</h1>
-    <p>Explore the audio samples with and without stem augmentation.</p>
+    <h1>Audio Samples for Music Enhancement</h1>
+    <!--<p>Audio Samples for the paper:""</p>-->
 
-    <!-- Table for Stem Augmentation -->
-    <h2>With Stem Augmentation</h2>
+    <h2>Inference of all_stem_A model</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Samples</th>
+                <th>Clean (ground truth)</th>
+                <th>Estimate (model prediction)</th>
+                <th>Noisy (augmented)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sample 1</td>
+                <td><button id="btn1" onclick="playSound('samples/wav/a/clean/aa1.wav', 'btn1')">Play</button></td>
+                <td><button id="btn2" onclick="playSound('samples/wav/a/est/ba1.wav', 'btn2')">Play</button></td>
+                <td><button id="btn3" onclick="playSound('samples/wav/a/noisy/ca1.wav', 'btn3')">Play</button></td>
+            </tr>
+            <tr>
+                <td>Sample 2</td>
+                <td><button id="btn4" onclick="playSound('samples/wav/a/clean/aa2.wav', 'btn4')">Play</button></td>
+                <td><button id="btn5" onclick="playSound('samples/wav/a/est/ba2.wav', 'btn5')">Play</button></td>
+                <td><button id="btn6" onclick="playSound('samples/wav/a/noisy/ca2.wav', 'btn6')">Play</button></td>
+            </tr>
+            <tr>
+                <td>Sample 3</td>
+                <td><button id="btn7" onclick="playSound('samples/wav/a/clean/aa3.wav', 'btn7')">Play</button></td>
+                <td><button id="btn8" onclick="playSound('samples/wav/a/est/ba3.wav', 'btn8')">Play</button></td>
+                <td><button id="btn9" onclick="playSound('samples/wav/a/noisy/ca3.wav', 'btn9')">Play</button></td>
+            </tr>
+            <tr>
+                <td>Sample 4</td>
+                <td><button id="btn10" onclick="playSound('samples/wav/a/clean/aa4.wav', 'btn10')">Play</button></td>
+                <td><button id="btn11" onclick="playSound('samples/wav/a/est/ba4.wav', 'btn11')">Play</button></td>
+                <td><button id="btn12" onclick="playSound('samples/wav/a/noisy/ca4.wav', 'btn12')">Play</button></td>
+            </tr>
+            <tr>
+                <td>Sample 5</td>
+                <td><button id="btn13" onclick="playSound('samples/wav/a/clean/aa5.wav', 'btn13')">Play</button></td>
+                <td><button id="btn14" onclick="playSound('samples/wav/a/est/ba5.wav', 'btn14')">Play</button></td>
+                <td><button id="btn15" onclick="playSound('samples/wav/a/noisy/ca5.wav', 'btn15')">Play</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Inference of <I>all_stem_NA </I> model</h2>
     <table>
         <thead>
             <tr>
@@ -89,82 +73,79 @@
         <tbody>
             <tr>
                 <td>Sample 1</td>
-                <td><audio controls><source src="samples/clean1.mp3" type="audio/mpeg"></audio></td>
-                <td><audio controls><source src="samples/est1.mp3" type="audio/mpeg"></audio></td>
-                <td><audio controls><source src="samples/noisy1.mp3" type="audio/mpeg"></audio></td>
+                <td><button id="btn16" onclick="playSound('samples/wav/na/clean/na1.wav', 'btn16')">Play</button></td>
+                <td><button id="btn17" onclick="playSound('samples/wav/na/est/nb1.wav', 'btn17')">Play</button></td>
+                <td><button id="btn18" onclick="playSound('samples/wav/na/noisy/nc1.wav', 'btn18')">Play</button></td>
             </tr>
             <tr>
                 <td>Sample 2</td>
-                <td><audio controls><source src="samples/clean2.mp3" type="audio/mpeg"></audio></td>
-                <td><audio controls><source src="samples/est2.mp3" type="audio/mpeg"></audio></td>
-                <td><audio controls><source src="samples/noisy2.mp3" type="audio/mpeg"></audio></td>
+                <td><button id="btn19" onclick="playSound('samples/wav/na/clean/na2.wav', 'btn19')">Play</button></td>
+                <td><button id="btn20" onclick="playSound('samples/wav/na/est/nb2.wav', 'btn20')">Play</button></td>
+                <td><button id="btn21" onclick="playSound('samples/wav/na/noisy/nc2.wav', 'btn21')">Play</button></td>
             </tr>
             <tr>
                 <td>Sample 3</td>
-                <td><audio controls><source src="samples/clean3.mp3" type="audio/mpeg"></audio></td>
-                <td><audio controls><source src="samples/est3.mp3" type="audio/mpeg"></audio></td>
-                <td><audio controls><source src="samples/noisy3.mp3" type="audio/mpeg"></audio></td>
+                <td><button id="btn22" onclick="playSound('samples/wav/na/clean/na3.wav', 'btn22')">Play</button></td>
+                <td><button id="btn23" onclick="playSound('samples/wav/na/est/nb3.wav', 'btn23')">Play</button></td>
+                <td><button id="btn24" onclick="playSound('samples/wav/na/noisy/nc3.wav', 'btn24')">Play</button></td>
             </tr>
             <tr>
                 <td>Sample 4</td>
-                <td><audio controls><source src="samples/clean4.mp3" type="audio/mpeg"></audio></td>
-                <td><audio controls><source src="samples/est4.mp3" type="audio/mpeg"></audio></td>
-                <td><audio controls><source src="samples/noisy4.mp3" type="audio/mpeg"></audio></td>
+                <td><button id="btn25" onclick="playSound('samples/wav/na/clean/na4.wav', 'btn25')">Play</button></td>
+                <td><button id="btn26" onclick="playSound('samples/wav/na/est/nb4.wav', 'btn26')">Play</button></td>
+                <td><button id="btn27" onclick="playSound('samples/wav/na/noisy/nc4.wav', 'btn27')">Play</button></td>
             </tr>
             <tr>
                 <td>Sample 5</td>
-                <td><audio controls><source src="samples/clean5.mp3" type="audio/mpeg"></audio></td>
-                <td><audio controls><source src="samples/est5.mp3" type="audio/mpeg"></audio></td>
-                <td><audio controls><source src="samples/noisy5.mp3" type="audio/mpeg"></audio></td>
+                <td><button id="btn28" onclick="playSound('samples/wav/na/clean/na5.wav', 'btn28')">Play</button></td>
+                <td><button id="btn29" onclick="playSound('samples/wav/na/est/nb5.wav', 'btn29')">Play</button></td>
+                <td><button id="btn30" onclick="playSound('samples/wav/na/noisy/nc5.wav', 'btn30')">Play</button></td>
             </tr>
         </tbody>
     </table>
 
-    <!-- Table for No Stem Augmentation -->
-    <h2>Without Stem Augmentation</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Sample</th>
-                <th>Clean</th>
-                <th>Est</th>
-                <th>Noisy</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Sample 1</td>
-                <td><audio controls><source src="samples/clean6.mp3" type="audio/mpeg"></audio></td>
-                <td><audio controls><source src="samples/est6.mp3" type="audio/mpeg"></audio></td>
-                <td><audio controls><source src="samples/noisy6.mp3" type="audio/mpeg"></audio></td>
-            </tr>
-            <tr>
-                <td>Sample 2</td>
-                <td><audio controls><source src="samples/clean7.mp3" type="audio/mpeg"></audio></td>
-                <td><audio controls><source src="samples/est7.mp3" type="audio/mpeg"></audio></td>
-                <td><audio controls><source src="samples/noisy7.mp3" type="audio/mpeg"></audio></td>
-            </tr>
-            <tr>
-                <td>Sample 3</td>
-                <td><audio controls><source src="samples/clean8.mp3" type="audio/mpeg"></audio></td>
-                <td><audio controls><source src="samples/est8.mp3" type="audio/mpeg"></audio></td>
-                <td><audio controls><source src="samples/noisy8.mp3" type="audio/mpeg"></audio></td>
-            </tr>
-            <tr>
-                <td>Sample 4</td>
-                <td><audio controls><source src="samples/clean9.mp3" type="audio/mpeg"></audio></td>
-                <td><audio controls><source src="samples/est9.mp3" type="audio/mpeg"></audio></td>
-                <td><audio controls><source src="samples/noisy9.mp3" type="audio/mpeg"></audio></td>
-            </tr>
-            <tr>
-                <td>Sample 5</td>
-                <td><audio controls><source src="samples/clean10.mp3" type="audio/mpeg"></audio></td>
-                <td><audio controls><source src="samples/est10.mp3" type="audio/mpeg"></audio></td>
-                <td><audio controls><source src="samples/noisy10.mp3" type="audio/mpeg"></audio></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+    <script>
+        let currentAudio = null;
+        let currentButton = null;
+
+        function playSound(file, buttonId) {
+            // Reset any currently playing audio
+            if (currentAudio && !currentAudio.paused) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                resetButton(currentButton);
+            }
+
+            // Update the button being clicked
+            const button = document.getElementById(buttonId);
+            button.innerText = 'Playing... 0%';
+            button.classList.add('playing');
+
+            // Create a new audio element
+            currentAudio = new Audio(file);
+            currentButton = button;
+
+            // Update progress while the audio is playing
+            currentAudio.ontimeupdate = function () {
+                const percentage = Math.floor((currentAudio.currentTime / currentAudio.duration) * 100);
+                button.innerText = `Playing... ${percentage}%`;
+            };
+
+            // Reset button when audio ends
+            currentAudio.onended = function () {
+                resetButton(button);
+            };
+
+            // Start playing
+            currentAudio.play();
+        }
+
+        function resetButton(button) {
+            button.innerText = 'Play';
+            button.classList.remove('playing');
+        }
+    </script>
 
 </body>
+
 </html>
